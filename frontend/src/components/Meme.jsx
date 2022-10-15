@@ -45,7 +45,7 @@ const Meme = () => {
     }
 
     return (
-        <main>
+        <main className="container mx-auto max-w-3xl	">
             <div className="form">
                 <input
                     type="text"
