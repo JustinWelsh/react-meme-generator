@@ -45,7 +45,7 @@ const Meme = () => {
     }
 
     return (
-        <main className="container mx-auto max-w-3xl	">
+        <main className="container mx-auto max-w-3xl my-6">
             <div className="form">
                 <input
                     type="text"
@@ -64,7 +64,7 @@ const Meme = () => {
                     onChange={handleChange}
                 />
                 <button
-                    className="form--button"
+                    className="form--button inline"
                     onClick={getMemeImage}
                 >
                     Get a new meme image 🖼

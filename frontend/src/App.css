@@ -64,9 +64,9 @@ main {
 }
 
 .meme--image {
-  margin: 0 auto;
+  margin: 2rem auto;
   max-width: 100%;
-  border-radius: 3px;
+  border-radius: 10px;
 }
 
 .meme--text {
