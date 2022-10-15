@@ -27,7 +27,7 @@ const Meme = () => {
         getMemes()
     }, [])
 
-    function getMemeImage() {
+    const getMemeImage = () => {
         const randomNumber = Math.floor(Math.random() * allMemes.length)
         const url = allMemes[randomNumber].url
         setMeme(prevMeme => ({
@@ -36,7 +36,7 @@ const Meme = () => {
         }))
     }
 
-    function handleChange(event) {
+    const handleChange = (event) =>  {
         const {name, value} = event.target
         setMeme(prevMeme => ({
             ...prevMeme,
@@ -45,7 +45,7 @@ const Meme = () => {
     }
 
     return (
-        <main className="container mx-auto max-w-3xl my-6">
+        <main className="container mx-auto max-w-3xl mt-20">
             <div className="form">
                 <input
                     type="text"
@@ -64,14 +64,14 @@ const Meme = () => {
                     onChange={handleChange}
                 />
                 <button
-                    className="form--button inline"
+                    className="form--button shadow-lg"
                     onClick={getMemeImage}
                 >
                     Get a new meme image 🖼
                 </button>
             </div>
             <div className="meme">
-                <img src={meme.randomImage} className="meme--image" />
+                <img src={meme.randomImage} className="meme--image shadow-xl" />
                 <h2 className="meme--text top">{meme.topText}</h2>
                 <h2 className="meme--text bottom">{meme.bottomText}</h2>
             </div>
